@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Weights
+weights/
+*.pth
+*.pt
+*.ckpt
+
+# Data
+data/
+
+# Results
+results/
+checkpoints/
+*.ply
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+runs/
+
+# Submodules managed separately
+modules/droid_slam/
+modules/depth_pro/
