@@ -331,36 +331,6 @@ python evaluate.py \
     --num_runs 5
 ```
 
-### Reported Results
-
-**TUM-RGBD ATE RMSE (m):**
-
-| Sequence | DROID-SLAM | Ours |
-|----------|-----------|------|
-| fr1/desk | 0.019 | **0.012** |
-| fr1/desk2 | 0.040 | **0.025** |
-| fr1/room | 0.046 | **0.024** |
-| fr2/xyz | 0.002 | **0.002** |
-| fr3/office | 0.035 | **0.022** |
-| **Average** | **0.038** | **0.024** (↓36.84%) |
-
-**EuRoC ATE RMSE (m):**
-
-| Sequence | DROID-SLAM | Ours |
-|----------|-----------|------|
-| MH_01 | 0.013 | **0.010** |
-| MH_02 | 0.014 | **0.010** |
-| V1_01 | 0.012 | **0.010** |
-| V2_01 | 0.017 | **0.015** |
-| **Average** | **0.022** | **0.020** (↓9.1%) |
-
-**AGBA Efficiency (Forest Dataset):**
-
-| Method | ATE (m) | Avg. BA Time (s) | Peak GPU (GB) | Graph Edges |
-|--------|---------|-------------------|---------------|-------------|
-| Full BA | 3.95 | 4.82 | 15.2 | ~1.2M |
-| **AGBA** | **3.32** | **0.35** (13× faster) | **6.8** (55% less) | **~95K** |
-
 ---
 
 ## 3DGS Rendering (Downstream Task)
@@ -380,11 +350,7 @@ python inference.py \
 #   cameras.txt   - pinhole camera intrinsics
 #   images.txt    - camera poses (world-to-camera)
 #   points3D.txt  - empty (3DGS initializes from depth maps)
-```
 
-Our method achieved **PSNR 27.93** on the Milarepa Buddhist Pavilion scene with PGSR rendering.
-
----
 
 ## Project Structure
 
