@@ -1,16 +1,5 @@
 # A Monocular Dense SLAM Framework for 3D Gaussian Rendering in Long-Term Complex Environments
 
-<p align="center">
-  <b>Yinchu Wang, Ximeng Cheng, Xiaobo Lu*</b><br>
-  School of Automation, Southeast University, Nanjing, China<br>
-  Key Laboratory of Measurement and Control of Complex Systems of Engineering, Ministry of Education
-</p>
-
----
-
-> **Abstract:** We propose a novel monocular SLAM algorithm tailored for long-term, challenging scenarios. Our framework integrates an attention-based feature correlation module with Deformable Convolutional GRU (DeformConv-GRU) for robust inter-frame correspondence, a Depth Estimation Bundle Adjustment (DEBA) module that fuses DepthPro-based monocular depth predictions with motion-based depth, and an Adaptive Global Bundle Adjustment (AGBA) strategy that efficiently optimizes accumulated poses via sparse graph construction. Our method achieves state-of-the-art average ATE on TUM (36.84% reduction) and EuRoC (9.1% reduction) benchmarks compared to leading learning-based methods. We further validate downstream 3DGS rendering quality (PSNR 27.93) on custom complex-environment datasets.
-
----
 
 ## Architecture Overview
 
