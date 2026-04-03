@@ -352,57 +352,6 @@ python inference.py \
 #   points3D.txt  - empty (3DGS initializes from depth maps)
 
 
-## Project Structure
-
-```
-.
-├── train.py              # Training script
-├── inference.py          # Full inference pipeline
-├── evaluate.py           # Evaluation on TUM/EuRoC/custom datasets
-├── depth.py              # DepthPro depth estimation
-├── slam.py               # DROID-SLAM with DEBA + AGBA
-├── mesh.py               # TSDF mesh reconstruction
-├── reconstruct.py        # Legacy one-command reconstruction
-├── download_models.py    # Download pretrained weights
-├── download_dataset.py   # Download example dataset
-├── requirements.txt      # Python dependencies
-├── weights/              # Model checkpoints
-│   ├── droid.pth
-│   └── depth_pro.pt
-├── modules/
-│   ├── __init__.py
-│   ├── metric.py         # DepthPro estimator wrapper (DepthProEstimator)
-│   ├── droid.py          # DROID-SLAM runner (Options, RGBDStream)
-│   ├── fusion.py         # TSDF volume fusion + mesh extraction
-│   ├── data.py           # PosedImageStream dataset
-│   ├── utils.py          # Utilities (calibration, trajectory conversion)
-│   ├── depth_pro/        # DepthPro submodule (Apple ml-depth-pro)
-│   ├── droid_slam/       # DROID-SLAM C++/CUDA backend
-│   └── droid_core/
-│       ├── droid_net.py      # DroidNet: Feature Correlation + DeformConv-GRU
-│       ├── droid.py          # Core Droid class
-│       ├── droid_frontend.py # Frontend with DEBA integration
-│       ├── droid_backend.py  # Backend with AGBA strategy
-│       ├── deba.py           # DEBA module implementation
-│       ├── depth_video.py    # Shared depth-pose video buffer
-│       ├── factor_graph.py   # Factor graph for BA optimization
-│       ├── motion_filter.py  # Motion-based keyframe filter
-│       └── modules/
-│           ├── extractor.py  # BasicEncoder + SelfAttention + CrossAttention
-│           ├── gru.py        # DeformConv-GRU (DeformConvLayer + ConvGRU)
-│           ├── corr.py       # 4D Correlation volume
-│           └── clipping.py   # Gradient clipping utility
-├── scripts/
-│   ├── calib.py          # Camera calibration
-│   ├── sample.py         # Video frame sampling
-│   ├── undistort.py      # Image undistortion
-│   └── viz_scene.py      # Scene visualization
-└── rgbd_benchmark/       # TUM RGBD evaluation tools
-    ├── evaluate_ate.py
-    ├── evaluate_rpe.py
-    └── associate.py
-```
-
 ---
 
 ## Datasets
